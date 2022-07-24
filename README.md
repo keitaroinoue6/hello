@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* Bookモデル
+* Authorモデル
+* Publisherモデル(出版社)
+* Book_authorモデル(BookモデルとAuthorモデルの中間テーブル)
