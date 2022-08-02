@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # /books/:idというパターンにマッチするパスへアクセスした時にBooksコントローラーのshowアクションを実行する
+  get "/books/:id" => "books#show"
 end
