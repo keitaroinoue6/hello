@@ -1,4 +1,12 @@
 class Book < ApplicationRecord
+
+  enum sales_status: {
+    reservation: 0, # 予約受付中
+    now_on_sale: 1, # 発売中
+    end_of_sales: 2, # 発売終了
+  }
+
+
   scope :costly, -> { where("price > ?", 3000) }
   scope :written_about, ->(theme) { where("name like ?", "%#{theme}%") }
 
@@ -34,5 +42,5 @@ class Book < ApplicationRecord
   def high_price?
     price >= 5000
   end
-  
+
 end
