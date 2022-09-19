@@ -3,10 +3,9 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :destroy]
 
   def show
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    # 下記の具体的な役割
+    # ・描画するためのテンプレートを探す ・見つかったテンプレを展開し最終的なHTMLを生成する
+    render :show
   end
 
   def destroy
